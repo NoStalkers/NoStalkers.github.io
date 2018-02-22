@@ -15,6 +15,32 @@
         body {
             font-family: 'UnifrakturMaguntia', cursive;
         }
+        @keyframes rainbow {
+    0%   {
+      background-color: red;
+      width:500px;
+    }
+    25%  {
+      background-color: yellow;
+      width: 200px;
+    }
+    50%  {
+      background-color: blue;
+      width: 300px
+    }
+    100% {
+      background-color: green;
+      width: 200px;
+    }
+}
+
+
+div {
+  animation-name: rainbow;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
     </style>
 </head>
 <body>
@@ -86,6 +112,7 @@ top bun
     </h2>
     <img src = "https://cdn.pixabay.com/photo/2016/10/22/15/32/water-1761027__340.jpg" width="200" width="200">
     <img src = "https://cdn.pixabay.com/photo/2017/12/09/23/04/bread-3008950__340.jpg" width="200" width="200">
+    <h1> Ever wanted a tasty, juicy burger. Taste this paradox, The Lil' Big Mac. Every bite explodes with flavor</h1>
 </body>
 </html>
 
