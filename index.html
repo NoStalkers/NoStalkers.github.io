@@ -4,6 +4,45 @@
     <title>Project: Recipe book</title>
     <meta charset="utf-8">
     <style>
+        /* Toggle CSS Code thing from https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/ */
+.animation {
+height: 100px;
+width: 100px;
+border: 5px solid hsl(356, 100%, 70%);
+border-radius: 50%;
+margin: 50px 100px;
+vertical-align: 50%;
+/* Animation */
+-webkit-animation-name: animation; /* Safari 4.0 - 8.0 */
+-webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+animation-name: animation;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-play-state: paused;
+transition: border-bottom-color 3s linear;
+}
+
+.animation:hover {
+animation-play-state: running;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation {
+0% {background-color: red; border-radius: 50%; transform: scale(1); border: 5px solid hsl(356, 100%, 70%);}
+25% {background-color: yellow; border: 5px solid hsl(38, 100%, 50%);}
+50% {background-color: blue; border: 5px solid hsl(213, 100%, 75%);}
+100% {background-color: red; border-radius: 10%; transform: scale(1.5); border: 5px solid hsl(356, 100%, 70%);}
+}
+
+/* Standard syntax */
+@keyframes animation {
+0% {background-color: red; border-radius: 50%; transform: scale(1); border: 5px solid hsl(356, 100%, 70%);}
+25% {background-color: yellow; border: 5px solid hsl(38, 100%, 50%);}
+50% {background-color: blue; border: 5px solid hsl(213, 100%, 75%);}
+100% {background-color: red; border-radius: 10%; transform: scale(1.5) rotate(180deg); border: 5px solid hsl(356, 100%, 70%);}
+}
         h1 {
             color: black;
         }
