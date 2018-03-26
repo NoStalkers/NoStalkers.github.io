@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project: Recipe book</title>
+    <meta charset="utf-8">
+    <style>
+        /* Toggle CSS Code thing from https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/ */
+.animation {
+height: 100px;
+width: 100px;
+border: 5px solid hsl(356, 100%, 70%);
+border-radius: 50%;
+margin: 50px 100px;
+vertical-align: 50%;
+/* Animation */
+-webkit-animation-name: animation; /* Safari 4.0 - 8.0 */
+-webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+animation-name: animation;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-play-state: paused;
+transition: border-bottom-color 3s linear;
+}
+.animation:hover {
+animation-play-state: running;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation {
+0% {background-color: red; border-radius: 50%; transform: scale(1); border: 5px solid hsl(356, 100%, 70%);}
+25% {background-color: yellow; border: 5px solid hsl(38, 100%, 50%);}
+<!--50% {background-color: blue; border: 5px solid hsl(213, 100%, 75%);}-->
+100% {background-color: red; border-radius: 10%; transform: scale(1.5); border: 5px solid hsl(356, 100%, 70%);}
+}
+/* Standard syntax */
+@keyframes animation {
+<!--0% {background-color: red; border-radius: 50%; transform: scale(1); border: 5px solid hsl(356, 100%, 70%);}-->
+25% {background-color: yellow; border: 5px solid hsl(38, 100%, 50%);}
+<!--50% {background-color: blue; border: 5px solid hsl(213, 100%, 75%);}-->
+100% {background-color: red; border-radius: 10%; transform: scale(1.5) rotate(180deg); border: 5px solid hsl(356, 100%, 70%);}
+}
+        h1 {
+            color: black;
+        }
+        
+        }
+        body {
+            color:black;
+        }
+        @import
+        url('https://fonts.googleapis.com/css?family=Bungee+Inline|Ceviche+One|Fredericka+the+Great|Great+Vibes|Homemade+Apple|Libre+Barcode+39+Extended|Monoton|UnifrakturMaguntia');
+        body {
+            font-family: 'UnifrakturMaguntia', cursive;
+        }
+        @keyframes rainbow {
+    0%   {
+      background-color: lightseagreen;
+      width:100%;
+    }
+    25%  {
+      background-color: yellow;
+      width:100%;
+    }
+    <!--50%  {
+      background-color: blue;
+      width: 100%;-->
+    }
+    100% {
+      background-color: green;
+      width: 100%;
+    }
+}
+div {
+  animation-name: rainbow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+    <!--filter: opacity (32%);-->
+        }     
+    body {
+        font-size: 20px;
+    }
+    </style>
+</head>
+<body><div>
+
+<h1> Burger Delight</h1>
+    
+<img src = "https://cdn.pixabay.com/photo/2016/11/06/23/16/breakfast-1804436__340.jpg" width="220" width="200">
+<h2>Contents:</h2>
+
+<ol>
+    <li><a href= "#killa">Recipe #1</a></li>
+    <li><a href= "#delicious">Recipe #2</a></li>
+</ol>
+    <img src = "https://cdn.pixabay.com/photo/2015/07/01/07/06/burger-827309__340.jpg" width ="200" width="200">
+
+    <h2 id="killa">Recipe #1</h2>
+
+        <ul>
+            <li>Time: 10 min</li>
+            <li>Serves: 1 hamburger</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredients</th>
+                    <td> 1 sesame seed hamburger bun,  <br> </td>
+                    <td>Half of an additional hamburger bun,   <br></td>
+                    <td>1/4 pound ground beef,   <br> </td>
+                    <td>Ground black pepper,   <br> </td>
+                    <td>1 tablespoon thousand island dressing or Big Mac Special Sauce clone (see Tidbits)<br></td>
+                    <td>1 teaspoon finely diced onion,    <br></td>
+                    <td>1/2 cup chopped iceberg lettuce,   <br></td>
+                    <td>1 slice American cheese,    <br></td>
+                    <td>2 to 3 dill pickle slices,   <br></td>
+                    <td>Salt</td>
+
+
+                </tr>
+            </thead>
+
+        </table>
+ <img src = "https://cdn.pixabay.com/photo/2014/01/16/01/48/chicken-nuggets-246180__340.jpg" width="400" width="400">
+        <p><strong>Step 1:</strong> 1. With a serrated knife, cut the top off the extra bun half, leaving about a 3/4-inch-thick slice. This will be the middle bun of your sandwich<br>
+2. Place the three buns on a hot pan or griddle, face down, and toast them to a light brown. Set aside, but keep the pan hot.<br>
+3. Divide the ground beef in half and press into two thin patties slightly larger than the bun.<br>
+4. Cook the patties in the hot pan over medium heat for 1 to 2 minutes on each side. Salt and pepper lightly.<br>
+5. Build the burger in the following stacking order from the bottom up:
+bottom bun
+half of special sauce
+half of onion
+half of lettuce
+American cheese
+beef patty
+middle bun
+remainder of special sauce
+remainder of onion
+remainder of lettuce
+pickle slices
+beef patty
+top bun
+</p>
+
+    <p><em>Source: <a target="_blank" href="https://topsecretrecipes.com/mcdonalds-big-mac-copycat-recipe.html">Big Mac recipe</a></em></p>
+
+
+
+    </h2>
+    <img src = "https://cdn.pixabay.com/photo/2017/12/09/23/04/bread-3008950__340.jpg" width="200" width="200">
+    <img src = "https://cdn.pixabay.com/photo/2017/02/25/15/20/pork-barbecue-2097993__340.jpg" width="200" width="200">
+    <h1> Ever wanted a tasty, juicy burger. Taste this paradox, The Lil' Big Mac. Every bite explodes with flavor.</h1>
+    <h1> Take a bite out of the tender meat. The delectable burger is filled with the special sour & spice sauce that runs down your face</h1>
+    <img src = "https://cdn.pixabay.com/photo/2017/11/16/05/51/restaurant-2953389__340.jpg" width="200" width="200">
+    </div></body>
+</html>
