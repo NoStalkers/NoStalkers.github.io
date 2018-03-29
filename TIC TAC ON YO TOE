@@ -1,4 +1,4 @@
-// Tic-Tac-Toe starter code for BHS class
+
 
 var player = "X";
 var board = [];
