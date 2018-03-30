@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Word Guesser Starter Code</title>
+</head>
+<style>
+    body {margin:0;}
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #222;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: blue;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover:not(.active) {
+        background-color: #127;
+    }
+    .active {
+        background-color: #4CAF50;
+    }
+</style>
+<body>
+<ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="test.html">Tic Tac Toe</a></li>
+    <li><a href="recipe.html">Recipe for Lil Big Mac</a></li>
+    <li><a href="wordguesser.html">Wordguesser</a></li>
+    <li><a href="Travel.html">Travel Page</a></li>
+</ul>
+<div id="guess_display"></div>
+
+
+<form id="guess_form">
+    <label>Guess a letter:
+        <input type="text" id="guess_input">
+    </label>
+</form>
+
+<div id="guess_status"></div>
+
+<script>
+    // Store DOM elements in variables
+    var guessForm = document.getElementById("guess_form");
+    var guessDisplay = document.getElementById("guess_display");
+    var guessInput = document.getElementById("guess_input");
+    var guessStatus = document.getElementById("guess_status");
+
+
+    // Initialize game state variables
+    var secretWord = "banana";
+    var guessedWord = [];
+    var guessedLetters = [];
+    for (var i = 0; i < secretWord.length; i++) {
+        guessedWord[i] = "_";
+    }
+
+    // Returns true if its a correct guess -
+    //  if the letter is anywhere in the word
+    // Also updates guessedWord and guessedLetters
+    var checkLetterGuess = function(letter) {
+        var found = false
+        for (var i = 0; i < secretWord.length; i++) {
+            if (letter === secretWord[i])
+            {
+                guessedWord[i]=letter;
+                found = true;
+
+            }
+
+        }
+        return found;
+    };
+
+    // Returns true if they guessed the whole word
+    var hasWon = function() {
+        for (var i = 0; i < secretWord.length; i++) {
+            if (guessedWord[i] !== secretWord[i])
+            {return false;}
+
+
+
+
+        } return true
+
+    };
+
+
+    var displayGuessedWord = function() {
+        guessDisplay.innerHTML = guessedWord.join(" ");
+    };
+
+
+    guessForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var foundLetter = checkLetterGuess(guessInput.value);
+        if (foundLetter) {
+            guessStatus.innerHTML = "Yay you found one!";
+        } else {
+            guessStatus.innerHTML = "Sorry, not so much!";
+        }
+        if (hasWon()) {
+            guessStatus.innerHTML += "WOOO WINNER WINNER!";
+        }
+        displayGuessedWord();
+        guessInput.value = "";
+    });
+    displayGuessedWord();
+
+
+
+</script>
+
+</body>
