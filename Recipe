@@ -4,6 +4,30 @@
     <title>Project: Recipe book</title>
     <meta charset="utf-8">
     <style>
+        body {margin:0;}
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #012;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #127;
+}
+.active {
+    background-color: #4CAF50;
+}
         /* Toggle CSS Code thing from https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/ */
 .animation {
 height: 100px;
@@ -84,7 +108,14 @@ div {
     }
     </style>
 </head>
-<body><div>
+<body>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Tic Tac Toe</a></li>
+  <li><a href="#contact">Recipe for Lil Big Mac</a></li>
+  <li><a href="#about">Wordguesser</a></li>
+</ul>
+<div>
 
 <h1> Burger Delight</h1>
     
